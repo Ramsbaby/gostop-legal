@@ -2,13 +2,13 @@
 
 > **AI GoStop (3 Players)**  
 > Effective Date: 2026-06-03  
-> Version: 1.1
+> Version: 1.2
 
 ---
 
 ## 0. Summary
 
-This app has **no sign-up or login feature.** Your nickname, game records, and virtual currency are stored **only on your device** and are not transmitted to our servers. The information we automatically process is limited to the minimum required for app analytics, crash diagnostics, and ad delivery.
+This app has **no sign-up or social login feature.** Your nickname, game records, and virtual currency are stored **only on your device** and are not transmitted to our servers. The information we process is limited to (1) app analytics, crash diagnostics, and advertising ID, and (2) purchase records arising from in-app purchases/subscriptions. **Actual payment methods (card numbers, etc.) are processed by Google Play/App Store and are not stored by us.**
 
 ---
 
@@ -20,6 +20,10 @@ This app has **no sign-up or login feature.** Your nickname, game records, and v
 - Crash logs and diagnostic data (Firebase Crashlytics)
 - Advertising ID (AD ID — for personalized ads; can be reset/limited in device settings)
 - App-instance identifier (auto-generated ID used to distinguish analytics/crash reports per device)
+
+### On In-App Purchase / Subscription
+- Purchased product ID (e.g., virtual-currency packs, premium membership, premium pass subscription), subscription status, store transaction identifier
+- **Actual payment information (card number, account, etc.) is processed by Google Play/App Store; we do not collect or store it.**
 
 ### Optional
 - Email address — provided only when you contact us (ms6698@naver.com); not collected automatically by the app.
@@ -38,6 +42,7 @@ This app has **no sign-up or login feature.** Your nickname, game records, and v
 | Service improvement / usage statistics | App usage data, device info | Firebase Analytics |
 | Crash diagnostics | Crash logs, diagnostic data | Firebase Crashlytics |
 | Personalized advertising | Advertising ID (AD ID) | Google AdMob |
+| In-app purchase / subscription | Product ID, subscription status, transaction identifier | Google Play / App Store billing |
 | Customer support | Inquiry content and email you send us | Email |
 
 ---
@@ -48,13 +53,14 @@ This app has **no sign-up or login feature.** Your nickname, game records, and v
 |-----------|-----------------|
 | App usage / crash analytics data | Retained per Firebase default retention policy, then auto-deleted |
 | Advertising ID | Until the advertising purpose is fulfilled (refreshed immediately when you reset it on your device) |
+| In-app purchase / subscription records | 5 years (Korean Act on Consumer Protection in Electronic Commerce) |
 | Support email and content | 3 years after the inquiry is resolved |
 
 ---
 
 ## 4. Third-Party Disclosure
 
-We do not provide your personal data to third parties, except for lawful requests required by law. The "processing entrustment" below is for service delivery and is distinct from third-party disclosure.
+We do not provide your personal data to third parties, except for lawful requests required by law. The "service providers" below are for service delivery and are distinct from third-party disclosure.
 
 ---
 
@@ -63,6 +69,7 @@ We do not provide your personal data to third parties, except for lawful request
 | Service Provider | Purpose |
 |-----------------|---------|
 | Google LLC | Firebase Analytics & Crashlytics (app analytics, crash diagnostics), Google AdMob (ad delivery) |
+| Google Play / Apple App Store | In-app purchase & subscription processing |
 
 Entrusted providers comply with applicable data protection laws and are prohibited from using the data for any other purpose.
 
@@ -71,8 +78,9 @@ Entrusted providers comply with applicable data protection laws and are prohibit
 ## 6. Your Rights
 
 - **Opt out of personalized ads / reset advertising ID**: Device Settings → Privacy (Ads) → Reset advertising ID or turn off ad personalization
+- **Manage / refund purchases & subscriptions**: governed by each store's (Google Play/App Store) subscription-management and refund policies.
 - **Questions about analytics data**: contact ms6698@naver.com
-- The identifying data we hold is limited to the automatically collected items above; related access/deletion requests are handled via email.
+- The identifying data we hold is limited to the automatically collected and purchase-record items above; related access/deletion requests are handled via email.
 
 **Contact:** ms6698@naver.com
 
@@ -80,7 +88,7 @@ Entrusted providers comply with applicable data protection laws and are prohibit
 
 ## 7. Data Security
 
-We use HTTPS/TLS encrypted transmission, and analytics/crash data is processed via Google Firebase's secure infrastructure.
+We use HTTPS/TLS encrypted transmission. Analytics/crash data is processed via Google Firebase's secure infrastructure, and payments are processed by the stores' secure billing systems.
 
 ---
 
